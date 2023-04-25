@@ -29,7 +29,7 @@ int main() {
     float xv = .01;
     float yv = .01;
 
-    //################### HOLD ONTO YOUR BUTTS, ITS THE GAME LOOP###############################################################
+    //##################GAME LOOP###############################################################
     while (renderWindow.isOpen()) {//keep window open until user shuts it down
         while (renderWindow.pollEvent(event)) { //look for events
 
@@ -40,19 +40,15 @@ int main() {
             //KEYBOARD INPUT (just one key to start
             if (Keyboard::isKeyPressed(Keyboard::W)) { //checks if "W" is pressed
                 paddle2.move(0, -5); //move the rectangle 5 pixels UP on the y axis
-                cout << "rectangle moving up" << endl; //for Mo's testing, you can take this out
             }
             if (Keyboard::isKeyPressed(Keyboard::S)) { //checks if "W" is pressed
                 paddle2.move(0, 5); //move the rectangle 5 pixels UP on the y axis
-                cout << "rectangle moving down" << endl; //for Mo's testing, you can take this out
             }
             if (Keyboard::isKeyPressed(Keyboard::Up)) { //checks if "W" is pressed
                 paddle1.move(0, -5); //move the rectangle 5 pixels UP on the y axis
-                cout << "rectangle moving up" << endl; //for Mo's testing, you can take this out
             }
             if (Keyboard::isKeyPressed(Keyboard::Down)) { //checks if "W" is pressed
                 paddle1.move(0, 5); //move the rectangle 5 pixels UP on the y axis
-                cout << "rectangle moving down" << endl; //for Mo's testing, you can take this out
             }
         }
         if (bx < 0 || bx > 500)
